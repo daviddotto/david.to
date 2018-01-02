@@ -16,9 +16,9 @@
 			<h1 class="page-title">Day {{ data.post.number }} of 365</h1>
 		</div>
 		<div class="date">
-			<h2>Posted on
+			<h2>
 				{% if data.post.publishedDate %}
-				on {{ data.post._.publishedDate.format("MMMM Do, YYYY") }}
+					{{ data.post._.publishedDate.format("MMMM Do, YYYY") }}
 				{% endif %}
 			</h2>
 		</div>

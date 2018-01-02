@@ -3,6 +3,9 @@ main.thumbnails {
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   margin-bottom: 100px;
+  @media screen and (max-width: 800px) {
+	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
   a.thumbnail-link {
 	display: block;
 	text-decoration: none;

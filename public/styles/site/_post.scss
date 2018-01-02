@@ -2,6 +2,9 @@ article {
   margin-bottom: 100px;
   h1 {
 	font-size: 5em;
+	@media screen and (max-width: 800px) {
+	  font-size: 4;
+	}
   }
   img {
 	border-radius: 2px;
