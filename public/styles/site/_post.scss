@@ -1,8 +1,11 @@
 article {
+  margin-bottom: 100px;
   h1 {
 	font-size: 5em;
   }
   img {
 	border-radius: 2px;
+	max-width: 100%;
+	height: auto;
   }
 }

@@ -1,4 +1,11 @@
 
+body {
+  @media screen and (max-width: 800px) {
+	display: flex;
+	flex-direction: column-reverse;
+  }
+}
+
 header#sidebar {
 	position: fixed;
 	width: 250px;
@@ -12,6 +19,14 @@ header#sidebar {
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-end;
+  @media screen and (max-width: 800px) {
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	height: auto;
+	text-align: left;
+	padding: 25px;
+  }
 }
 
 main#content, footer#footer {
@@ -19,6 +34,10 @@ main#content, footer#footer {
 	position: relative;
 	width: calc(100vw - 50px);
 	padding-left: 350px;
+	@media screen and (max-width: 800px) {
+	  width: 100%;
+	  padding: 25px;
+	}
 }
 
 header.blog-intro {

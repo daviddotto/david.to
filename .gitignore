@@ -30,5 +30,8 @@ node_modules
 # Ignore .idea directory
 .idea/*
 
+# Ignore .sass-cache directory
+.sass-cache/*
+
 # Ignore .DS_Store files on OS X
 .DS_Store
