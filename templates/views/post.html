@@ -10,6 +10,8 @@
 <meta name="twitter:image" content="{{ data.post._.image.fit(500,500) }}">
 {% endblock %}
 
+{% block title %}{{ data.post.title }} {{ data.post.number }}/365{% endblock %}
+
 {% block content %}
 	<header class="blog-intro">
 		<div class="day-number">
