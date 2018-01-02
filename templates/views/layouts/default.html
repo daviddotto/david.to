@@ -99,6 +99,18 @@
 
 		{# Add scripts that are globally required by your site here. #}
 
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-29011943-6"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-29011943-6');
+		</script>
+
+
+
 
 
 		{# Include template-specific javascript files by extending the js block #}
