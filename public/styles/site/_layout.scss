@@ -34,8 +34,10 @@ header.blog-intro {
   align-items: center;
   z-index: -1;
   h1.page-title {
+	position: relative;
 	font-size: 4em;
 	opacity: 0.15;
 	transform: scale(4) translateY(7.5%) translateX(10%);
+	z-index: -1;
   }
 }
