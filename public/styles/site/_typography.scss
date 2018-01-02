@@ -1,0 +1,35 @@
+body {
+  font-family: $font-primary;
+  color: $color-white;
+  font-size: $base-font-size;
+}
+
+h1, h2, h3, h4 {
+  font-family: $font-title;
+  letter-spacing: -0.1em;
+  a {
+    text-decoration: none;
+  }
+}
+
+h1.site-logo {
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+}
+
+p.bio-summary {
+  font-size: 2em;
+  margin: 0;
+  abbr {
+    margin-left: 0.25em;
+  }
+}
+
+a, a:visited {
+  color: $color-primary;
+  text-decoration-skip: ink;
+}
+
+abbr {
+  text-decoration: none;
+}
