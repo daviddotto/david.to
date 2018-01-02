@@ -22,7 +22,7 @@ Post.add({
 		extended: { type: Types.Html, wysiwyg: true, height: 400 },
 	},
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
-	number: { type: Number, required: true, default: 0 },
+	number: { type: Number, required: true, initial: true },
 })
 
 Post.schema.virtual('content.full').get(function () {
