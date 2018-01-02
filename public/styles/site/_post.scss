@@ -8,4 +8,17 @@ article {
 	max-width: 100%;
 	height: auto;
   }
+  a.back-link {
+	display: inline-block;
+	padding: 0.5em 0.75em 0.4em 0.6em;
+	background-color: $color-primary;
+	color: $color-background;
+	border-radius: 3px;
+	transform: scale(0.9) translateX(-4%);
+	cursor: pointer;
+	transition: all 150ms ease-out;
+	&:hover {
+	  transform: scale(1) translateX(-4%);
+	}
+  }
 }

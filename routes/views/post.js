@@ -24,6 +24,7 @@ exports = module.exports = function (req, res) {
 
 		q.exec(function (err, result) {
 			locals.data.post = result
+			locals.data.post.tweetTextString = encodeURI(result.title + ' ' + result.number + '/365')
 			next(err)
 		})
 
