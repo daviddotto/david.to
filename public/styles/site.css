@@ -4,6 +4,7 @@
   src: url("../fonts/leaguespartan-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/leaguespartan-bold.woff2") format("woff2"), url("../fonts/leaguespartan-bold.woff") format("woff"), url("../fonts/leaguespartan-bold.ttf") format("truetype"), url("../fonts/leaguespartan-bold.svg#league_spartanbold") format("svg");
   font-weight: bold;
   font-style: normal; }
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #FFF;
@@ -32,10 +33,17 @@ a, a:visited {
 abbr {
   text-decoration: none; }
 
-@media screen and (max-width: 800px) {
-  body {
-    display: flex;
-    flex-direction: column-reverse; } }
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100vw;
+  height: auto;
+  margin: 0;
+  padding: 0; }
+  @media screen and (max-width: 800px) {
+    body {
+      display: flex;
+      flex-direction: column-reverse; } }
 
 header#sidebar {
   position: fixed;
@@ -57,7 +65,9 @@ header#sidebar {
       width: 100%;
       height: auto;
       text-align: left;
-      padding: 25px; } }
+      align-items: flex-start;
+      padding: 25px;
+      margin: 0; } }
 
 main#content, footer#footer {
   box-sizing: border-box;
@@ -79,13 +89,28 @@ header.blog-intro {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: -1; }
+  height: 12.5vw;
+  z-index: 0; }
   header.blog-intro h1.page-title {
-    position: relative;
-    font-size: 4em;
+    position: fixed;
+    white-space: nowrap;
+    font-size: 15vw;
     opacity: 0.15;
-    transform: scale(4) translateY(7.5%) translateX(10%);
-    z-index: -1; }
+    transform: translateY(-100%) translateX(-30%);
+    z-index: -2; }
+  header.blog-intro h2 {
+    position: relative;
+    z-index: 9; }
+  @media screen and (max-width: 800px) {
+    header.blog-intro {
+      display: block;
+      margin-bottom: 50px;
+      height: auto; }
+      header.blog-intro h1.page-title {
+        position: relative;
+        font-size: 4em;
+        transform: none;
+        margin: 0 0 -0.25em; } }
 
 main.thumbnails {
   display: grid;
@@ -131,10 +156,17 @@ article {
     border-radius: 2px;
     max-width: 100%;
     height: auto; }
+  article a.back-link {
+    display: inline-block;
+    padding: 0.5em 0.75em 0.4em 0.6em;
+    background-color: #5436DF;
+    color: #1A162C;
+    border-radius: 3px;
+    transform: scale(0.9) translateX(-4%);
+    cursor: pointer;
+    transition: all 150ms ease-out; }
+    article a.back-link:hover {
+      transform: scale(1) translateX(-4%); }
 
 body {
-  background-color: #1A162C;
-  overflow-x: hidden;
-  overflow-y: auto; }
-
-/*# sourceMappingURL=site.css.map */
+  background-color: #1A162C; }

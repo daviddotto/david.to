@@ -25,7 +25,7 @@
 	</header>
 	<article>
 		<p>
-			<a href="/blog">&larr; back</a>
+			<h2><a href="/blog" class="back-link">&larr; back</a></h2>
 		</p>
 		{% if not data.post %}
 			<h2>Invalid Post.</h2>
@@ -35,10 +35,32 @@
 			</header>
 			<div class="post">
 				{% if data.post.image.exists %}
-						<img src="{{ data.post._.image.fit(500,500) }}">
+						<img width="500" src="{{ data.post._.image.fit(750,750) }}">
 				{% endif %}
+				<p>
+					<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{ data.post.tweetTextString }}&via=mr_d_todd&hashtags=DoodahADay" data-size="large">Tweet</a>
+				</p>
 				{{ data.post.content.full|safe }}
 			</div>
 		{% endif %}
 	</article>
+
+	<script>window.twttr = (function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0],
+					t = window.twttr || {};
+			if (d.getElementById(id)) return t;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "https://platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js, fjs);
+
+			t._e = [];
+			t.ready = function(f) {
+				t._e.push(f);
+			};
+
+			return t;
+		}(document, "script", "twitter-wjs"));</script>
+
+
 {% endblock %}
