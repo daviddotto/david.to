@@ -7,9 +7,11 @@ article {
 	}
   }
   img {
+	position: relative;
 	border-radius: 2px;
 	max-width: 100%;
 	height: auto;
+	z-index: 9;
   }
   a.back-link {
 	display: inline-block;
