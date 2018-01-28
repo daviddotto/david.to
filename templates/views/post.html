@@ -6,7 +6,7 @@
 <meta name="twitter:site" content="@mr_d_todd">
 <meta name="twitter:creator" content="@mr_d_todd">
 <meta name="twitter:title" content="{{ data.post.title }} | #doodahaday {{ data.post.number }}/365">
-<meta name="twitter:description" content="{{ data.post.content.full|safe }}">
+<meta name="twitter:description" content="{{ data.post.content.full|striptags(true) }}">
 <meta name="twitter:image" content="{{ data.post._.image.fit(500,500) }}">
 {% endblock %}
 
