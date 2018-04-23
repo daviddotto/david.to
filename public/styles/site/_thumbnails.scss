@@ -26,6 +26,8 @@ main.thumbnails {
 	  height: 100%;
 	  border-radius: 2px;
 	  overflow: hidden;
+	  background-image: url('../images/load.gif');
+	  background-size: cover ;
 	}
 	img.preview-image {
 	  z-index: 1;
@@ -42,6 +44,9 @@ main.thumbnails {
 	  z-index: 2;
 	  transition: all 200ms ease-out;
 	  text-shadow: 0 0 30px $color-background;
+	  @media screen and (min-width: 1100px) {
+		font-size: 6em;
+	  }
 	}
   }
 }

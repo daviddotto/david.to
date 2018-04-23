@@ -10,7 +10,7 @@
 			#{{ post.number }}
 		</h2>
 		{% if post.image.exists %}
-		<img src="{{ post._.image.fill(365,365) }}" class="preview-image">
+		<img data-src="{{ post._.image.fill(365,365) }}" src="images/load.gif" class="preview-image">
 		{% endif %}
 	</div>
 </a>
@@ -28,8 +28,9 @@
 {% endblock %}
 
 {% block content %}
-<main class="thumbnails">
+<main class="thumbnails" id="thumbnails">
 	{% for post in data.posts.results %} {{ blogPost(post) }} {% endfor %}
 </main>
+<script src="/js/lazyLoadThumbnails.js"></script>
 {% endblock %}
 
