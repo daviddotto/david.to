@@ -38,9 +38,9 @@
 			<div class="post">
 				{% if data.post.image.exists %}
 					{% if data.post.image.format == "gif" %}
-							<img width="500" src="{{ data.post._.image.fit(300,300) }}" alt="Artwork - {{ data.post.content.full|safe }}">
+							<img width="500" src="{{ data.post._.image.fit(300,300) }}" alt="Artwork - {{ data.post.content.full|striptags(true)|escape }}">
 					{% else %}
-							<img width="500" src="{{ data.post._.image.fit(750,750) }}" alt="Artwork - {{ data.post.content.full|safe }}">
+							<img width="500" src="{{ data.post._.image.fit(750,750) }}" alt="Artwork - {{ data.post.content.full|striptags(true)|escape  }}">
 					{% endif %}
 				{% endif %}
 				
