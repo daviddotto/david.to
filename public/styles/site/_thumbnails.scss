@@ -26,6 +26,8 @@ main.thumbnails {
 	  height: 100%;
 	  border-radius: 2px;
 	  overflow: hidden;
+	  background-image: url('../images/load.gif');
+	  background-size: cover ;
 	}
 	img.preview-image {
 	  z-index: 1;

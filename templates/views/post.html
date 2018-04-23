@@ -37,8 +37,13 @@
 			</header>
 			<div class="post">
 				{% if data.post.image.exists %}
-						<img width="500" src="{{ data.post._.image.fit(750,750) }}">
+					{% if data.post.image.format is "gif" %}
+							<img width="500" src="{{ data.post._.image.fit(300,300) }}" alt="Artwork - {{ data.post.content.full|safe }}">
+					{% else %}
+							<img width="500" src="{{ data.post._.image.fit(750,750) }}" alt="Artwork - {{ data.post.content.full|safe }}">
+					{% endif %}
 				{% endif %}
+				
 				<p>
 					<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{ data.post.tweetTextString }}&via=mr_d_todd&hashtags=DoodahADay" data-size="large">Tweet</a>
 				</p>

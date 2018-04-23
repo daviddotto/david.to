@@ -135,7 +135,9 @@ main.thumbnails {
       width: 100%;
       height: 100%;
       border-radius: 2px;
-      overflow: hidden; }
+      overflow: hidden;
+      background-image: url("../images/load.gif");
+      background-size: cover; }
     main.thumbnails a.thumbnail-link img.preview-image {
       z-index: 1;
       max-width: 100%;
