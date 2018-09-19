@@ -6,20 +6,18 @@
 {% macro blogPost(post) %}
 <a href="/post/{{ post.slug }}" class="thumbnail-link">
 	<div class="thumbnail">
-		<h2 class="day-number">
-			#{{ post.number }}
-		</h2>
 		{% if post.image.exists %}
 		<img data-src="{{ post._.image.fill(365,365) }}" src="images/load.gif" class="preview-image">
 		{% endif %}
 	</div>
+	<p class="thumbnail-caption">{{ post.title }}</p>
 </a>
 {% endmacro %}
 
 {% block intro %}
 <header class="blog-intro">
 	<div class="day-number">
-		<h1 class="page-title">#DoodahADay</h1>
+		
 	</div>
 	<div class="twitter-link">
 		<h2><a href="https://twitter.com/mr_d_todd">@mr_d_todd</a></h2>

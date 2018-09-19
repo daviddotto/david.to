@@ -124,37 +124,37 @@ main.thumbnails {
     display: block;
     text-decoration: none;
     position: relative; }
-    main.thumbnails a.thumbnail-link:hover img.preview-image {
-      transform: scale(1.05); }
-    main.thumbnails a.thumbnail-link:hover .day-number {
-      pointer-events: none;
-      transform: scale(1.1);
-      opacity: 0.2; }
+    main.thumbnails a.thumbnail-link:hover {
+      border-radius: 5px; }
+      main.thumbnails a.thumbnail-link:hover img.preview-image {
+        transform: scale(1.05);
+        border-radius: 5px; }
+      main.thumbnails a.thumbnail-link:hover .day-number {
+        pointer-events: none;
+        transform: scale(1.1);
+        opacity: 0.2; }
     main.thumbnails a.thumbnail-link .thumbnail {
       display: block;
+      margin: 0;
+      padding: 0;
       width: 100%;
       height: 100%;
-      border-radius: 2px;
+      border-radius: 5px;
       overflow: hidden;
       background-image: url("../images/load.gif");
-      background-size: cover; }
+      background-size: cover;
+      transform: scale(1); }
+      main.thumbnails a.thumbnail-link .thumbnail img {
+        border-radius: 5px; }
     main.thumbnails a.thumbnail-link img.preview-image {
       z-index: 1;
       max-width: 100%;
       transition: all 500ms ease-out; }
-    main.thumbnails a.thumbnail-link .day-number {
-      color: #FFF;
-      font-size: 5vw;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translateY(-0.5vw) translateX(-0.5vw);
-      z-index: 2;
-      transition: all 200ms ease-out;
-      text-shadow: 0 0 30px #1A162C; }
-      @media screen and (min-width: 1100px) {
-        main.thumbnails a.thumbnail-link .day-number {
-          font-size: 6em; } }
+
+a .thumbnail-caption {
+  font-size: 1.25em;
+  font-weight: bold;
+  color: white; }
 
 article {
   margin-bottom: 100px; }
@@ -165,7 +165,7 @@ article {
         font-size: 4; } }
   article img {
     position: relative;
-    border-radius: 2px;
+    border-radius: 5px;
     max-width: 100%;
     height: auto;
     z-index: 9; }
@@ -180,6 +180,11 @@ article {
     transition: all 150ms ease-out; }
     article a.back-link:hover {
       transform: scale(1) translateX(-4%); }
+  article .post-header {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
 
 body {
   background-color: #1A162C; }
