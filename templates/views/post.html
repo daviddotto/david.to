@@ -10,25 +10,20 @@
 <meta name="twitter:image" content="{{ data.post._.image.fit(500,500) }}">
 {% endblock %}
 
-{% block title %}{{ data.post.title }} {{ data.post.number }}/365{% endblock %}
+{% block title %}{{ data.post.title }}{% endblock %}
 
 {% block content %}
-	<header class="blog-intro">
-		<div class="day-number">
-			<h1 class="page-title">Day {{ data.post.number }} of 365</h1>
-		</div>
-		<div class="date">
-			<h2>
-				{% if data.post.publishedDate %}
-					{{ data.post._.publishedDate.format("MMMM Do, YYYY") }}
-				{% endif %}
-			</h2>
-		</div>
-	</header>
 	<article>
-		<p>
+		<header class="post-header">
 			<h2><a href="/blog" class="back-link">&larr; back</a></h2>
-		</p>
+			<div class="date">
+				<h2>
+					{% if data.post.publishedDate %}
+						{{ data.post._.publishedDate.format("D MMMM YYYY") }}
+					{% endif %}
+				</h2>
+			</div>
+		</header>
 		{% if not data.post %}
 			<h2>Invalid Post.</h2>
 		{% else %}
