@@ -1,6 +1,0 @@
-{
-    "extends": "keystone",
-  	"rules" : {
-	  "semi" : "off"
-	}
-}
